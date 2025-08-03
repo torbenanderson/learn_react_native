@@ -3,6 +3,13 @@
 # dependencies
 node_modules/
 
+# IDE
+.vscode/
+
+# Logs
+*.log
+logs/
+
 # Expo
 .expo/
 dist/
@@ -17,6 +24,8 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+android/
+ios/
 
 # Metro
 .metro-health-check*
@@ -32,6 +41,9 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+.env.test
+.env.production
 
 # typescript
 *.tsbuildinfo
