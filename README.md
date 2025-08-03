@@ -394,6 +394,86 @@ export default function RootLayout() {
 
 This hook architecture provides a clean, maintainable way to handle theme management across your React Native application.
 
+## Project Structure & Folder Organization 📁
+
+Understanding the folder structure is crucial for maintaining a clean and scalable React Native application. Here's the recommended project structure:
+
+```
+my-app/
+├── app/                  // All of your routes and screen components go here
+│   ├── (tabs)/
+│   │   ├── index.tsx
+│   │   └── explore.tsx
+│   ├── _layout.tsx
+│   ├── +not-found.tsx
+│   └── ...
+├── assets/               // Your images, fonts, and other static files
+├── components/           // Reusable UI components (buttons, cards, etc.)
+├── hooks/                // Your custom React hooks (useAuth, useTheme, etc.)
+├── state/                // Your global state management files (context or Zustand)
+├── utils/                // Utility functions and constants
+├── types/                // All of your TypeScript types and interfaces
+├── package.json
+└── ...
+```
+
+### **Folder Structure Breakdown:**
+
+#### **app/** - Routes and Screens
+- **File-based routing** with Expo Router
+- **`_layout.tsx`** - Root layout and navigation structure
+- **`(tabs)/`** - Tab-based navigation screens
+- **`+not-found.tsx`** - 404 error page
+- **Other route files** - Additional screens and nested routes
+
+#### **assets/** - Static Resources
+- **Images** - Icons, logos, backgrounds
+- **Fonts** - Custom typography files
+- **Other static files** - Videos, audio, documents
+
+#### **components/** - Reusable UI Components
+- **Atomic Design structure** (atoms, molecules, organisms)
+- **Platform-specific components** (`components/ui/`)
+- **Feature-specific components** (forms, cards, modals)
+
+#### **hooks/** - Custom React Hooks
+- **`useThemeColor.ts`** - Theme management
+- **`useColorScheme.ts`** - Platform color detection
+- **Custom business logic hooks** (useAuth, useApi, etc.)
+
+#### **state/** - Global State Management
+- **Context providers** - React Context for global state
+- **Zustand stores** - Lightweight state management
+- **Redux slices** - If using Redux Toolkit
+
+#### **utils/** - Utility Functions
+- **Helper functions** - Date formatting, validation, etc.
+- **Constants** - App-wide constants and configuration
+- **API utilities** - HTTP client setup, interceptors
+
+#### **types/** - TypeScript Definitions
+- **Interface definitions** - Component props, API responses
+- **Type declarations** - Custom types and enums
+- **Global types** - App-wide type definitions
+
+### **Benefits of This Structure:**
+
+- **Scalability**: Easy to add new features without cluttering
+- **Maintainability**: Clear separation of concerns
+- **Team collaboration**: Consistent structure across team members
+- **Code organization**: Logical grouping of related functionality
+- **Type safety**: Centralized TypeScript definitions
+
+### **Best Practices:**
+
+1. **Keep it flat**: Avoid deeply nested folders when possible
+2. **Group by feature**: Organize related files together
+3. **Use clear naming**: Descriptive folder and file names
+4. **Separate concerns**: Keep UI, logic, and data separate
+5. **Follow conventions**: Stick to established patterns
+
+This structure provides a solid foundation for building scalable React Native applications with clear organization and maintainable code.
+
 ## Scripts & Automation 🔧
 
 The `scripts/` folder contains utility scripts that automate common development tasks. These scripts help streamline your workflow and reduce manual, error-prone processes.
