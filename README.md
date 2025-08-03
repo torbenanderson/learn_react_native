@@ -650,6 +650,18 @@ This guide covers:
 - **Implementation examples** with code samples
 - **Recommended libraries** for different authentication needs
 
+### **Best Practices Guide**
+For comprehensive React Native development best practices, see our [Best Practices Guide](BEST_PRACTICES.md).
+
+This guide covers:
+- **Performance optimization** (FlatList, memoization, asset management)
+- **Code reusability** (atomic components, custom hooks, TypeScript)
+- **Navigation and routing** (Expo Router best practices)
+- **Dependency management** (updates, maintenance, cleanup)
+- **Testing and quality assurance** (component testing, error boundaries)
+- **Security practices** (secure storage, input validation)
+- **Accessibility** (labels, color contrast, screen readers)
+
 ## Get a fresh project
 
 When you're ready, run:
